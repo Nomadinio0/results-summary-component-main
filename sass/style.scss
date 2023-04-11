@@ -19,6 +19,10 @@
 	color: hsl(228, 45%, 44%);
 }
 
+.heading {
+	padding: 30px 0;
+}
+
 html {
 	font-size: 18px;
 	font-family: 'Hanken Grotesk', sans-serif;
@@ -36,7 +40,7 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 500px;
+		height: 480px;
 		width: 700px;
 		border-radius: 35px;
 		box-shadow: 10px 10px 30px 5px rgba(235, 241, 255, 1);
@@ -52,11 +56,6 @@ body {
 			background: linear-gradient($slateBlueBG, $royalBlueBG);
 			border-radius: 35px;
 			color: $lavender;
-
-			.heading {
-				padding: 40px 0;
-				font-weight: 700;
-			}
 
 			&__score {
 				margin: auto;
@@ -79,7 +78,7 @@ body {
 			}
 
 			&__rank {
-				padding: 50px;
+				padding: 40px;
 
 				span {
 					display: block;
@@ -93,11 +92,76 @@ body {
 
 		.summary {
 			padding: 0 40px;
-			
-			.heading {
-				padding: 40px 0;
+			color: $darkBlue;
+
+			&__skill {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 10px;
+				padding: 15px;
+				border-radius: 15px;
+
+				&-title {
+					display: flex;
+					align-items: center;
+
+					.icon {
+						margin-right: 10px;
+					}
+				}
+
+				&-score {
+					color: hsl(224, 30%, 27%, 0.5);
+					font-weight: bold;
+
+					span {
+						color: black;
+					}
+				}
+			}
+
+			.reaction {
+				color: $lightRed;
+				background-color: hsl(0, 100%, 67%, 5%);
+			}
+
+			.memory {
+				color: $orange;
+				background-color: hsl(39, 100%, 56%, 10%);
+			}
+
+			.verbal {
+				color: $greenTeal;
+				background-color: hsl(166, 100%, 37%, 5%);
+			}
+
+			.visual {
+				color: $cobaltBlue;
+				background-color: hsl(234, 85%, 45%, 5%);
+			}
+
+			.summary-btn {
+				margin-top: 30px;
+				width: 100%;
+				height: 50px;
+				background: $darkBlue;
+				color: $paleBlue;
 				font-weight: 700;
+				letter-spacing: 0.5px;
+				font-size: 16px;
+				border: none;
+				border-radius: 25px;
+				cursor: pointer;
+				font-family: 'Hanken Grotesk', sans-serif;
+
+				&:active {
+					background: linear-gradient($slateBlueBG, $royalBlueBG);
+				}
 			}
 		}
 	}
 }
+
+@media only screen and (min-width: 800px) {
+}
+
